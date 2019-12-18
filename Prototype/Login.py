@@ -13,19 +13,44 @@ def delete4():
 #def logoff():
     # screen7.destroy()
 
+def saved():
+    screen10 = Toplevel(screen)
+    screen10.title("Saved")
+    screen10.geometry("100x100")
+    Label(screen10, text = "Saved").pack()
+
+def save():
+    filename = raw_user.get()
+    password = raw_pass.get()
+
+    data = open(filename, "w")
+    data.write(password)
+    data.close()
+
+    saved()
+
 def add_pass():
-    screen9 = Toplevel(screen)
-    screen9.title("Info")
-    screen9.geometry("300x250")
-    Label(screen9, text = "Please enter your password and choose how you would like to store it : ").pack()
-    global raw_filename
-    raw_filename = StringVar()
+    global raw_user
+    raw_user = StringVar()
     global raw_pass
     raw_pass = StringVar()
 
+    screen9 = Toplevel(screen)
+    screen9.title("Adding a Password")
+    screen9.geometry("300x250")
+    Label(screen9, text = "Please enter your username : ").pack()
+    Entry(screen9, textvariable = raw_user).pack()
+    Label(screen9, text = "Please enter your password : ").pack()
+    Entry(screen9, textvariable = raw_pass).pack()
+    #radio_button = Radiobutton(screen9, variable = v, value = 0, text = "Just Add Password", command = lambda: print(v.get())).pack()
+    #radio_button2 = Radiobutton(screen9, variable = v, value = 1, text= "Add Password and Corresponding Account", command = lambda: print(v.get())).pack()
+    #radio_button3 = Radiobutton(screen9, variable = v, value = 2, text= "Generate a Strong Random Password",  command = lambda: print(v.get())).pack()
+    Button(screen9, text = "Save", command = save).pack()
+
+
 def session():
     screen8 = Toplevel(screen)
-    screen8.title("dashboard")
+    screen8.title("Dashboard")
     screen8.geometry("400x400")
     Label(screen8, text = "Welcome the the Dashboard of the Password Manager").pack()
     Button(screen8, text = "Add Password", command = add_pass).pack()
@@ -131,6 +156,7 @@ def login():
 
 def main_screen():
     global screen
+    global Tk
     screen = Tk()
     screen.geometry("300x250")
     screen.title("Password Manager")

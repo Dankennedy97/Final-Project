@@ -4,7 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365a08a4-6c45-4215-a03c-cd92576b4f66" name="Default Changelist" comment="" />
+    <list default="true" id="365a08a4-6c45-4215-a03c-cd92576b4f66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Prototype.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Prototype.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Login.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +22,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1Ufa0DlHSD7szPka3ZCGTcS4TR2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,6 +34,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.Login">
     <configuration name="Login" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -106,22 +117,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="177" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1576523345375" />
-    <state width="1362" height="297" key="GridCell.Tab.0.bottom" timestamp="1576602350077">
+    <state x="869" y="278" key="FileChooserDialogImpl" timestamp="1576625798742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="297" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576602350077" />
-    <state width="1362" height="297" key="GridCell.Tab.0.center" timestamp="1576602350077">
+    <state x="869" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576625798742" />
+    <state width="936" height="314" key="GridCell.Tab.0.bottom" timestamp="1576627193998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="297" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576602350077" />
-    <state width="1362" height="297" key="GridCell.Tab.0.left" timestamp="1576602350077">
+    <state width="936" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576627193998" />
+    <state width="936" height="314" key="GridCell.Tab.0.center" timestamp="1576627193998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="297" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576602350077" />
-    <state width="1362" height="297" key="GridCell.Tab.0.right" timestamp="1576602350077">
+    <state width="936" height="314" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576627193998" />
+    <state width="936" height="314" key="GridCell.Tab.0.left" timestamp="1576627193998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="297" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576602350077" />
+    <state width="936" height="314" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576627193998" />
+    <state width="936" height="314" key="GridCell.Tab.0.right" timestamp="1576627193998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="314" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576627193998" />
     <state width="936" height="347" key="GridCell.Tab.1.bottom" timestamp="1576520951729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -138,10 +153,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="936" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576520951729" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1576590898530">
+    <state x="461" y="161" key="SettingsEditor" timestamp="1576602885975">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576590898530" />
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576602885975" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1576602607718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576602607718" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
