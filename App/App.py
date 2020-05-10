@@ -1,23 +1,24 @@
 from tkinter import *
 import os
 
-#def delete2():
-    # screen3.destroy()
+#Youtube video 1 https://www.youtube.com/watch?v=Xt6SqWuMSA8&t=578s
+#Youtube video 2 https://www.youtube.com/watch?v=Z-deSpgtIG0&t=20s
+#Youtube video 3 https://www.youtube.com/watch?v=OqfcGng4oKs
 
-def delete3():
+def delete2():
     screen4.destroy()
 
-def delete4():
-    screen5.destroy()
+def delete():
+    screen3.destroy()
 
 #def logoff():
     # screen7.destroy()
 
 def saved():
-    screen10 = Toplevel(screen)
-    screen10.title("Saved")
-    screen10.geometry("100x100")
-    Label(screen10, text = "Saved").pack()
+    screen7 = Toplevel(screen)
+    screen7.title("Saved")
+    screen7.geometry("100x100")
+    Label(screen7, text = "Saved").pack()
 
 def save():
     filename = raw_user.get()
@@ -35,27 +36,27 @@ def add_pass():
     global raw_pass
     raw_pass = StringVar()
 
-    screen9 = Toplevel(screen)
-    screen9.title("Adding a Password")
-    screen9.geometry("300x250")
-    Label(screen9, text = "Please enter your username : ").pack()
-    Entry(screen9, textvariable = raw_user).pack()
-    Label(screen9, text = "Please enter your password : ").pack()
-    Entry(screen9, textvariable = raw_pass).pack()
-    #radio_button = Radiobutton(screen9, variable = v, value = 0, text = "Just Add Password", command = lambda: print(v.get())).pack()
-    #radio_button2 = Radiobutton(screen9, variable = v, value = 1, text= "Add Password and Corresponding Account", command = lambda: print(v.get())).pack()
-    #radio_button3 = Radiobutton(screen9, variable = v, value = 2, text= "Generate a Strong Random Password",  command = lambda: print(v.get())).pack()
-    Button(screen9, text = "Save", command = save).pack()
+    screen6 = Toplevel(screen)
+    screen6.title("Adding a Password")
+    screen6.geometry("300x250")
+    Label(screen6, text = "Please enter your username : ").pack()
+    Entry(screen6, textvariable = raw_user).pack()
+    Label(screen6, text = "Please enter your password : ").pack()
+    Entry(screen6, textvariable = raw_pass).pack()
+    #radio_button = Radiobutton(screen6, variable = v, value = 0, text = "Just Add Password", command = lambda: print(v.get())).pack()
+    #radio_button2 = Radiobutton(screen6, variable = v, value = 1, text= "Add Password and Corresponding Account", command = lambda: print(v.get())).pack()
+    #radio_button3 = Radiobutton(screen6, variable = v, value = 2, text= "Generate a Strong Random Password",  command = lambda: print(v.get())).pack()
+    Button(screen6, text = "Save", command = save).pack()
 
 
 def session():
-    screen8 = Toplevel(screen)
-    screen8.title("Dashboard")
-    screen8.geometry("400x400")
-    Label(screen8, text = "Welcome the the Dashboard of the Password Manager").pack()
-    Button(screen8, text = "Add Password", command = add_pass).pack()
-    Button(screen8, text = "Manage Existing Passwords").pack()
-    Button(screen8, text = "Settings").pack()
+    screen5 = Toplevel(screen)
+    screen5.title("Dashboard")
+    screen5.geometry("400x400")
+    Label(screen5, text = "Welcome the the Dashboard of the Password Manager").pack()
+    Button(screen5, text = "Add Password", command = add_pass).pack()
+    Button(screen5, text = "Manage Existing Passwords").pack()
+    Button(screen5, text = "Settings").pack()
 
 def login_success():
     session()
@@ -66,31 +67,35 @@ def password_not_recognised():
     screen4.title("Success")
     screen4.geometry("150x100")
     Label(screen4, text="Password does not exist").pack()
-    Button(screen4, text="OK", command=delete3).pack()
+    Button(screen4, text="OK", command=delete2).pack()
 
 def user_not_found():
-    global screen5
-    screen5 = Toplevel(screen)
-    screen5.title("Success")
-    screen5.geometry("150x100")
-    Label(screen5, text="User does not exist").pack()
-    Button(screen5, text="OK", command=delete4).pack()
+    global screen3
+    screen3 = Toplevel(screen)
+    screen3.title("Success")
+    screen3.geometry("150x100")
+    Label(screen3, text="User does not exist").pack()
+    Button(screen3, text="OK", command=delete).pack()
 
-def register_user():
+def reg_user():
     username_info = username.get()
     password_info = password.get()
+    password_info_1 = conf_pass.get()
 
-    file = open(username_info, "w")
-    file.write(username_info+"\n")
-    file.write(password_info)
-    file.close()
+    if password_info == password_info_1:
+        file = open(username_info, "w")
+        file.write(username_info+"\n")
+        file.write(password_info)
+        file.close()
+        Label(screen1, text="Reg Success", fg="green", font=("calibri", 11)).pack()
+    else:
+        Label(screen1, text="Reg Fail, Passwords did not match", fg="green", font=("calibri", 11)).pack()
 
     username_entry.delete(0, END)
     password_entry.delete(0, END)
+    conf_pass_entry.delete(0, END)
 
-    Label(screen1, text = "Reg Success", fg = "green", font = ("calibri", 11)).pack()
-
-def login_verify():
+def log_verify():
     username1 = username_verify.get()
     password1 = password_verify.get()
     username_entry1.delete(0, END)
@@ -115,10 +120,13 @@ def register():
     screen1.geometry("300x250")
     global username
     global password
+    global conf_pass
     global username_entry
     global password_entry
+    global conf_pass_entry
     username = StringVar()
     password = StringVar()
+    conf_pass = StringVar()
 
     Label(screen1, text = "Please enter details below").pack()
     Label(screen1, text = "").pack()
@@ -128,7 +136,10 @@ def register():
     Label(screen1, text="Password * ").pack()
     password_entry = Entry(screen1, textvariable = password)
     password_entry.pack()
-    Button(screen1, text = "Register", width = 10, height = 1, command = register_user).pack()
+    Label(screen1, text="Confirm Password * ").pack()
+    conf_pass_entry = Entry(screen1, textvariable = conf_pass)
+    conf_pass_entry.pack()
+    Button(screen1, text = "Register", width = 10, height = 1, command = reg_user).pack()
 
 def login():
     global screen2
@@ -152,7 +163,7 @@ def login():
     password_entry1 = Entry(screen2, textvariable = password_verify)
     password_entry1.pack()
     Label(screen2, text = "").pack()
-    Button(screen2, text = "Login", width = 10, height = 1, command = login_verify).pack()
+    Button(screen2, text = "Login", width = 10, height = 1, command = log_verify).pack()
 
 def main_screen():
     global screen
